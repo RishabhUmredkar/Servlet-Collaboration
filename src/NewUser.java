@@ -3,17 +3,17 @@
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/reg")
-public class RegServ extends HttpServlet {
-  
+@WebServlet("/nuser")
+public class NewUser extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+			
+
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 		
@@ -25,36 +25,34 @@ public class RegServ extends HttpServlet {
 		String pass = request.getParameter("pass");
 		String enrol = request.getParameter("enrol");
 		
-		
-		
-		
-		if(enrol.equals("abc123")){
-			RequestDispatcher dispatcher = request.getRequestDispatcher("admin");
-			dispatcher.forward(request, response);
-
-		}
-		else if(enrol.equals("abc122")){
-			RequestDispatcher dispatcher = request.getRequestDispatcher("user");
-			dispatcher.forward(request, response);
-		}
-		else if(enrol.equals("  ")){
-			out.print("Enter correct Enrollment No.");
-			out.print("You are neither Admin nor User");
-			
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/index.html");
-			dispatcher.include(request, response);
-		}
-
-		else {
-			response.sendRedirect("nuser");
-		}
+		out.print("Welcome New User");
+		out.print("<!DOCTYPE html>");
+		out.print("<html>");
+		out.print("<head>");
+		out.print("  <link rel='stylesheet' href='css/style1.css'>");
+		out.print("</head>");
+		out.print("<body>");
+		out.print("<table border = '1'>");
+		out.print("<tr>");
+		out.print("<th>Name</th>");
+		out.print("<th>Email</th>");
+		out.print("<th>Password</th>");
+		out.print("<th>Enrollment No.</th>");
+		out.print("</tr>");
+		out.print("<tr>");
+		out.print("<td>"+name+"</td>");
+		out.print("<td>"+email+"</td>");
+		out.print("<td>"+pass+"</td>");
+		out.print("<td>"+enrol+"</td>");
+		out.print("</tr>");
+		out.print("</table>");
+		out.print("</html>");
+		out.print("</head>");
 	}
+
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);
 	}
 
 }
-
-
-
