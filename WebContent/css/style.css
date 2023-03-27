@@ -1,133 +1,106 @@
-  html, body {
-      display: flex;
-      justify-content: center;
-      height: 100%;
-      }
-      body, div, h1, form, input, p { 
-      padding: 10;
-      margin: 10;
-      outline: none;
-      font-family: Roboto, Arial, sans-serif;
-      font-size: 16px;
-      color: #666;
-      }
-      h1 {
-      padding: 10px 0;
-      font-size: 32px;
-      font-weight: 300;
-      text-align: center;
-      }
-      p {
-      font-size: 12px;
-      }
-      hr {
-      color: #a9a9a9;
-      opacity: 0.3;
-      }
-      .main-block {
-      max-width: 340px; 
-      min-height: 460px; 
-      padding: 10px 0;
-      margin: auto;
-      border-radius: 5px; 
-      border: solid 1px #ccc;
-      box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
-      background: #ebebeb; 
-      }
-      form {
-      margin: 0 30px;
-      }
-      .account-type, .gender {
-      margin: 15px 0;
-      }
-      input[type=radio] {
-      display: none;
-      }
-      label#icon {
-      margin: 0;
-      border-radius: 5px 0 0 5px;
-      }
-      label.radio {
-      position: relative;
-      display: inline-block;
-      padding-top: 4px;
-      margin-right: 20px;
-      text-indent: 30px;
-      overflow: visible;
-      cursor: pointer;
-      }
-      label.radio:before {
-      content: "";
-      position: absolute;
-      top: 2px;
-      left: 0;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background: #1c87c9;
-      }
-      label.radio:after {
-      content: "";
-      position: absolute;
-      width: 9px;
-      height: 4px;
-      top: 8px;
-      left: 4px;
-      border: 3px solid #fff;
-      border-top: none;
-      border-right: none;
-      transform: rotate(-45deg);
-      opacity: 0;
-      }
-      input[type=radio]:checked + label:after {
-      opacity: 1;
-      }
-      input[type=text], input[type=password] {
-      width: calc(100% - 57px);
-      height: 36px;
-      margin: 13px 0 0 -5px;
-      padding-left: 10px; 
-      border-radius: 0 5px 5px 0;
-      border: solid 1px #cbc9c9; 
-      box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
-      background: #fff; 
-      }
-      input[type=password] {
-      margin-bottom: 15px;
-      }
-      #icon {
-      display: inline-block;
-      padding: 9.3px 15px;
-      box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
-      background: #1c87c9;
-      color: #fff;
-      text-align: center;
-      }
-      .btn-block {
-      margin-top: 10px;
-      text-align: center;
-      }
-      button {
-      width: 100%;
-      padding: 10px 0;
-      margin: 10px auto;
-      border-radius: 5px; 
-      border: none;
-      background: #1c87c9; 
-      font-size: 14px;
-      font-weight: 600;
-      color: #fff;
-      }
-      button:hover {
-      background: #26a9e0;
-      }
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+body {
+    background-color: #dd4242;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.main {
+    background-color: #ffffff;
+    width: 400px;
+    height: 500px;
+    margin: 5em auto;
+    border-radius: 1.5em;
+    box-shadow: 0px 11px 35px 2px rgba(148, 102, 200, 0.14);
+}
+
+.sign {
+    padding-top: 40px;
+    color: #937aa0;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.un {
+width: 76%;
+color: rgb(0, 0, 0);
+font-weight: 700;
+font-size: 14px;
+letter-spacing: 1px;
+background: rgba(0, 0, 0, 0.04);
+padding: 10px 20px;
+border: none;
+border-radius: 20px;
+outline: none;
+box-sizing: border-box;
+border: 2px solid rgba(0, 0, 0, 0.02);
+margin-bottom: 50px;
+margin-left: 46px;
+text-align: center;
+margin-bottom: 27px;
+font-family: 'Ubuntu', sans-serif;
+}
+
+form.form1 {
+    padding-top: 20px;
+}
+
+.pass {
+        width: 76%;
+color: rgb(0, 0, 0);
+font-weight: 700;
+font-size: 14px;
+letter-spacing: 1px;
+background: rgba(0, 0, 0, 0.04);
+padding: 5px 20px;
+border: none;
+border-radius: 20px;
+outline: none;
+box-sizing: border-box;
+border: 2px solid rgba(0, 0, 0, 0.02);
+margin-bottom: 50px;
+margin-left: 46px;
+text-align: center;
+margin-bottom: 0px;
+font-family: 'Ubuntu', sans-serif;
+}
+
+
+.un:focus, .pass:focus {
+    border: 2px solid rgba(0, 0, 0, 0.18) !important;
+    
+}
+
+.submit {
+  cursor: pointer;
+    border-radius: 5em;
+    color: #000000;
+    background: linear-gradient(to right, #9C27B0, #E040FB);
+    border: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-left: 35%;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
+
+.forgot {
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.12);
+    color: #c23dda;
+    padding-top: 15px;
+}
+
+a {
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.12);
+    color: #000000;
+    text-decoration: none
+}
+
+@media (max-width: 600px) {
+    .main {
+        border-radius: 0px;
+    }
+}
+    

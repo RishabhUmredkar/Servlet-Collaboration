@@ -38,8 +38,11 @@ public class RegServ extends HttpServlet {
 			dispatcher.forward(request, response);
 		}
 		else if(enrol.equals("")){
-			out.print("Enter correct Enrollment No.");
+			out.print("<center>");
+			out.print("Enter correct Enrollment No.<br>");
 			out.print("You are neither Admin nor User");
+			out.print("</center>");
+
 			out.print("<br>");
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/index.html");
 			dispatcher.include(request, response);
