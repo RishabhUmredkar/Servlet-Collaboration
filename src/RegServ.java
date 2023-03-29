@@ -1,4 +1,4 @@
-
+	
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -20,7 +20,7 @@ public class RegServ extends HttpServlet {
 
 		
 		
-		String name = request.getParameter("fname");
+		String name = request.getParameter("name");
 		String email = request.getParameter("email");
 		String pass = request.getParameter("pass");
 		String enrol = request.getParameter("enrol");

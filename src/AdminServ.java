@@ -21,7 +21,7 @@ public class AdminServ extends HttpServlet {
 
 		
 		
-		String name = request.getParameter("fname");
+		String name = request.getParameter("name");
 		String email = request.getParameter("email");
 		String pass = request.getParameter("pass");
 		String enrol = request.getParameter("enrol");
